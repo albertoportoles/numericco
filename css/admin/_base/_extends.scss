@@ -1,0 +1,18 @@
+
+
+.boton{
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0px;
+  color: white;
+  cursor: pointer;
+
+  line-height: 21px;
+  @include transition(all .2s ease-in);
+  padding: 6px 15px;
+  background-color: $turquesa;
+
+}

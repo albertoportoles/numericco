@@ -1,0 +1,187 @@
+/**
+*
+* Grid By Numéricco
+*
+**/
+
+html{
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+body {
+  background: #f4f4f4;
+  font-family: $proxima;
+  font-size: 14px;
+  color: $numericco;
+  border-top: 2px solid $turquesa;
+  overflow-x: hidden !important;
+
+  &.notfound,
+  &.signin {
+    background: #eeeded;
+  }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: $proxima;
+}
+
+
+h4{
+  &.panel-title{
+    font-size: 30px;
+    line-height: 28px;
+    width: auto;
+    color: $negro;
+    float: none;
+    clear: none;
+    letter-spacing: -1px;
+    margin: 0;
+    text-align: left;
+    font-weight: 300;
+
+  }
+}
+
+i{
+  font-style: normal;
+}
+
+ul, li{
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+a{
+  font-weight: 600;
+  color: $turquesa;
+  text-decoration: none;
+  @include transition(all .2s ease-in);
+
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+p{
+  color: $numericco;
+  margin-bottom: 10px;
+}
+
+
+button{
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 0px;
+  color: white;
+  background-color: $turquesa;
+}
+
+:active, :focus {
+  outline: none;
+}
+select, textarea, input {
+   -webkit-appearance: none;
+  width: 100%;
+}
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: $negro;
+  background-color: white;
+  color: $negro;
+}
+
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus{
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: $negro;
+  background-color: white;
+}
+
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+select,
+textarea {
+  color: $numericco;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+  height: auto;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 13px;
+  @include transition(all .2s ease-in);
+
+  &:focus{
+    border-color: $gris;
+    -moz-box-shadow: 3px 3px 0 rgba(12,12,12,.05);
+    -webkit-box-shadow: 3px 3px 0 rgba(12,12,12,.05);
+    box-shadow: 3px 3px 0 rgba(12,12,12,.05);
+  }
+
+}
+
+
+.btn{
+  @extend .boton;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  text-transform: uppercase;
+
+  &:hover{
+    background-color: $boton-hover;
+    color: white;
+  }
+}
+
+input[type=button].btn,
+input[type=reset].btn,
+input[type=submit].btn{
+
+  @extend .boton;
+  -webkit-appearance: button;
+
+  border-color: $turquesa;
+  &:hover{
+    background-color: $boton-hover;
+    color: white;
+  }
+}

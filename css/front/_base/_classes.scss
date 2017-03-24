@@ -1,0 +1,51 @@
+
+.nomobile{
+  @include responsive(tablet){
+    display: none;
+  }
+
+}
+.notablet {
+  @include responsive(pc){
+    display: none;
+  }
+}
+
+.titulo{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  @include font-size(1.4);
+  margin: 6px 0;
+  line-height: 15px;
+}
+
+.font-logo{
+  color: $numericco;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.container{
+  max-width: 1800px;
+  width: 100%;
+  @include responsive(tablet){
+    padding: 0px;
+  }
+}
+
+
+section{
+  clear: both;
+  padding: 100px 0;
+  display: block;
+  .col{
+
+    &.col-2{
+      width: 50%;
+      float: left;
+    }
+
+  }
+}

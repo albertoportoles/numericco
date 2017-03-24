@@ -1,0 +1,339 @@
+
+//************  PRELOADER  ************//
+#preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $grisfondo;
+    z-index: 10000;
+
+    #status{
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -15px 0 0 -15px;
+      font-size: 32px;
+
+      .fa{
+        font-size: 41px;
+      }
+
+    }
+
+}
+
+//************ GENERAL  ************//
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.container{
+  width: 100%;
+  max-width: 1500px;
+
+  .leftpanel{
+    position: fixed;
+    left:0;
+    height: calc(100%);
+    max-width: 250px;
+    width:100%;
+    z-index: 100;
+    border-right: 1px solid $grisclaro;
+    @include transition(all .3s ease-in);
+
+    @include responsive(pc){
+      @include transform(translateX(-250px));
+    }
+
+    .logopanel{
+      margin: 10px 0;
+        padding: 10px;
+    }
+    .leftpanelinner{
+      padding: 5px 15px;
+
+      h5{
+        font-size: 11px;
+        margin: 10px 0;
+        text-transform: uppercase;
+        color: $negro;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-weight: 800;
+      }
+
+      ul.nav{
+        margin-bottom: 30px;
+        li{
+          float: none;
+          display: block;
+          a{
+            display: block;
+            color: $negro;
+            color: #313131;
+            font-size: 13px;
+            padding: 7px 10px;
+            &:hover{
+              color: $turquesa;
+            }
+          }
+          &.active{
+            a{
+              color: $turquesa;
+            }
+          }
+        }
+
+        &.nav-menu{
+          li{
+            a{
+
+            }
+            ul{
+              list-style: none;
+              display: none;
+              margin: 5px 0;
+              padding: 0;
+              padding-left: 10px;
+              li{
+                a{
+                  color: $gristexto;
+                  padding: 7px 10px;
+                  &:hover{
+                    color: $turquesa;
+                  }
+
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .mainpanel{
+    position: relative;
+    height: auto;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    @include transition(all .3s ease-in);
+
+    @include responsive(pc){
+      margin-left: 0px;
+      width:100%;
+    }
+
+
+  }
+}
+
+//************ FORM GROUP  ************//
+.form-group{
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 15px;
+
+  .input-group-addon{
+    position: absolute;
+    top: 0;
+    right: 16px;
+    padding: 10px;
+    background: $numericco;
+    color: white;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &:after{
+    clear: both;
+    display: table;
+    content: " ";
+  }
+
+  &:before{
+    display: table;
+    content: " ";
+  }
+
+  label{
+    padding-right: 10px;
+    padding-top: 6px;
+    margin-top: 3px;
+    display: block;
+  }
+
+  label.control-label{
+    width: 25%;
+    float:left;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    margin-top: 3px;
+    text-align: right;
+    @include responsive(tablet){
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+    .asterisk {
+      color: $rojo;
+    }
+  }
+
+  .col-sm-9{
+    position: relative;
+    min-height: 1px;
+    float:left;
+    width: 75%;
+    @include responsive(tablet){
+      width: 100%;
+    }
+
+    select{
+      position: relative;
+      &:after{
+        content: 'v';
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index:10;
+
+      }
+    }
+  }
+
+  .caja_content{
+
+    display: block;
+  }
+
+  .checkbox{
+    margin-bottom:7px;
+  }
+
+
+
+
+  .input.checkbox{
+      padding-top: 0;
+      padding-left: 0;
+      margin-right: 18px;
+      margin-top: 9px;
+      position: relative;
+
+      input[type=checkbox] {
+        opacity: 0;
+        position: absolute;
+      }
+
+      label{
+        position: relative;
+        padding-left: 25px;
+        width: 100%;
+        padding-top: 0;
+margin-top: 0;
+
+        &:before{
+          width: 18px;
+          height: 18px;
+          position: absolute;
+          top: 0px;
+          left: 3px;
+          content: '';
+          display: inline-block;
+          -moz-border-radius: 2px;
+          -webkit-border-radius: 2px;
+          border-radius: 2px;
+          border: 1px solid #bbb;
+          background: #fff;
+        }
+
+      }
+
+      input[type=checkbox]:checked {
+
+          & + label{
+
+            &:before{
+              border-color: $numericco;
+              background-color: $numericco;
+            }
+
+            &:after{
+              font-family: 'FontAwesome';
+              content: "\F00C";
+              position: absolute;
+              top: 3px;
+              left: 6px;
+              display: inline-block;
+              font-size: 11px;
+              width: 16px;
+              height: 16px;
+              color: #fff;
+            }
+
+          }
+
+      }
+
+  }
+
+}
+
+
+
+//************  CLASES  ************//
+#flashMessage{
+    position: fixed;
+    width: auto;
+    max-height: 300px;
+    background: rgba(70, 195, 187, 0.52);
+    z-index: 5000;
+    bottom: 0;
+    color: $numericco;
+    padding: 50px 20px;
+    text-transform: uppercase;
+    right: 0;
+    width: 29%;
+    height: auto;
+    left: auto;
+    top: auto;
+}
+
+.message {
+    padding: 12px 3px;
+    text-align: center;
+    margin: 0;
+    color: $turquesa;
+    font-weight: bold;
+}
+
+.pull-center{
+    text-align: center;
+}
+
+.caret, .glyphicon {
+    display: inline-block;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.hidden {
+  display: none !important;
+}

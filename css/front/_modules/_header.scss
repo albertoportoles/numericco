@@ -1,0 +1,151 @@
+header.header{
+
+  .navbar{
+    position: fixed;
+    background: white;
+    border: none;
+    z-index: 300;
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0;
+    @include transition(all .75s ease);
+    @include transform(translateY(0));
+
+    @include responsive(pc){
+      padding-top: 0px;
+    }
+
+    .navbar-header{
+      float: left;
+      z-index: 10;
+      @include responsive(tablet){
+        width:100%;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        background-color: white;
+      }
+
+      .navbar-brand{
+        @extend .font-logo;
+        @include font-size(2.6);
+        @include transition(all .75s ease);
+        @include transform(translateY(0));
+        float: left;
+        line-height: 60px;
+
+        @include responsive(pc){
+          line-height: 40px;
+          @include font-size(2);
+          margin: 14px;
+        }
+
+        img{
+          width: 45px;
+          float: left;
+          margin-right: 5px;
+
+          @include responsive(pc){
+            width: 35px;
+          }
+        }
+
+      }
+      .icon-nav{
+        margin: 10px;
+        float: right;
+        display: none;
+        border: none;
+        background: transparent;
+        svg{
+          width: 40px;
+          height: 40px;
+
+        }
+        @include responsive(pc){
+          display: block;
+        }
+
+      }
+
+    }
+
+    .navbar-nav{
+      float: right;
+      @include responsive(pc){
+          display: block;
+          width: 100%;
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          right: -100%;
+          overflow: scroll;
+          z-index: 9;
+          background: $numericco;
+          @include box-sizing(hidden);
+          @include transition(all .2s ease);
+          @include viewport-unit(height, 100vh);
+      }
+
+      .sidemenu{
+        @include responsive(pc){
+          overflow: hidden;
+          @include viewport-unit(height, 100vh);
+        }
+      }
+
+
+      ul{
+        position: relative;
+        @include responsive(pc){
+            margin: 135px 0 0;
+        }
+
+
+        li{
+          float: left;
+          line-height: 40px;
+          margin-right: 10px;
+          @include responsive(pc){
+            float: none;
+            height: 50px;
+          }
+          a{
+            text-transform: uppercase;
+            color: $numericco;
+            font-weight: 500;
+            @include transition(all .5s ease);
+            @include font-size(1.4);
+            position: relative;
+            letter-spacing: 2px;
+
+            @include responsive(pc){
+              min-height: 50px;
+            }
+
+            &:hover{
+              background: none;
+              color: $turquesa;
+            }
+          }
+        }
+      }
+
+
+
+    }
+
+
+    &.nav-to-bottom{
+      @include transform(translateY(-70px));
+    }
+
+    &.nav-to-top{
+    @include transform(translateY(0));
+    }
+
+  }
+
+}

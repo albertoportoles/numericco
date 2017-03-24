@@ -1,0 +1,84 @@
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+
+
+.panel-images{
+  position: relative;
+
+
+  #imagenes_sortable{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    min-height: 600px;
+
+		hr{
+			display: none;
+		}
+    .caja_ver_foto{
+      height: 170px;
+      background: white;
+      .handle{
+        background-color: #dedede;
+        padding: 5px 10px;
+        color: #111;
+        cursor: move;
+      }
+      .imagen {
+        padding: 5px 0 0 16px;
+        float: left;
+        max-width: 200px;
+        min-width: 200px;
+        height: 105px;
+        display: block;
+        overflow: hidden;
+      }
+      .caja_ver_foto_content {
+        float: none;
+        padding: 15px;
+        width: 40%;
+        min-width: 200px;
+        display: inline-block;
+        .photo-title{
+          color: $negro;
+          font-size: 16px;
+          margin: 0;
+          font-family: $proxima;
+          line-height: normal;
+          width: 100%;
+          max-width: 100%;
+          input{
+            color: $numericco;
+            width: 100%;
+            border: 1px solid #ccc;
+            background-color: white;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            padding: 10px;
+            height: auto;
+          }
+        }
+        .quitar_foto_creada {
+          float: left;
+          margin: 10px 0 0 10px;
+        }
+      }
+
+    }
+
+    .ui-sortable-handle {
+      -ms-touch-action: none;
+      touch-action: none;
+    }
+    .ui-state-highlight{
+      background-color: red;
+    }
+
+
+  }
+
+
+}

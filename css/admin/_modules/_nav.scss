@@ -1,0 +1,11 @@
+
+body.leftpanel-collapsed{
+  .container{
+    .leftpanel{
+      @include transform(translateX(0px));
+    }
+    .mainpanel{
+      margin-left: 250px;
+    }
+  }
+}

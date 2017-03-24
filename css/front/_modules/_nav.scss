@@ -1,0 +1,35 @@
+html {
+  &.side-opened {
+    overflow-x: hidden !important;
+    position: relative;
+    .navmenu {
+      background: transparent;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0);
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0);
+      @include responsive(bigmovil) {
+        width: 290px;
+      }
+    }
+  }
+}
+
+
+body {
+
+  &.side-open {
+
+    header.header{
+
+      .navbar{
+        .navbar-nav {
+          @include transform(translateX(-100%));
+          @include transition(all 0.2s ease);
+        }
+      }
+
+    }
+
+
+  }
+}

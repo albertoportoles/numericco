@@ -1,0 +1,105 @@
+footer.footer{
+  width: 100%;
+  clear: both;
+  padding: 90px 0;
+  display: block;
+
+
+  @include responsive(pc){
+      padding: 30px 20px;
+  }
+
+
+  .container{
+    max-width: 1280px;
+  }
+
+  .col-md-3{
+
+    .logo_footer{
+        @extend .font-logo;
+        @include font-size(2.7);
+    }
+
+    p:not(.titulo, .logo_footer){
+        text-transform: none;
+        margin-top: 34px;
+        @include responsive(pc){
+          margin-top: 10px;
+        }
+    }
+
+    .titulo{
+      @include responsive(pc){
+        display: none;
+      }
+    }
+
+    a{
+      color: $numericco;
+      &:hover{
+        color: $turquesa;
+      }
+      &.legal{
+        @include responsive(pc){
+          display: none;
+        }
+      }
+
+      &.email{
+        display: block;
+        margin: 2px 0;
+        @include responsive(pc){
+          font-weight: 700;
+        }
+      }
+      &.telefono{
+        display: block;
+        margin: 2px 0 10px;
+        @include responsive(pc){
+          font-weight: 700;
+        }
+      }
+
+
+    }
+
+    &:first-child{
+      p:not(.titulo, .logo_footer){
+          margin-top: 20px;
+      }
+    }
+
+
+  }
+
+  .redes{
+
+    @include responsive(pc){
+      display: block;
+    }
+
+    .titulo{
+      @include responsive(pc){
+        display: inline-block;
+      }
+    }
+
+    p{
+      display: inline;
+    }
+    .redes_content{
+      display: inline;
+      margin-left: 10px;
+      a{
+        margin-right: 6px;
+        @include font-size(1.6);
+        @include responsive(pc){
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,36 @@
+
+#imagenes_sortable{
+
+  .imagen{
+    padding: 5px 0 0 16px;
+    float: left;
+    max-width: 200px;
+    min-width: 200px;
+    height: 105px;
+    display: block;
+    overflow: hidden;
+    img{
+      display: block;
+      width: auto;
+      max-width: 200px;
+    }
+
+  }
+  .caja_ver_foto_content{
+    float:none;
+    display: inline-block;
+  }
+  .editable{
+    width:100%;
+  }
+  hr{
+    clear: both;
+    margin-top: 45px;
+  }
+  .photo-title {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+}
